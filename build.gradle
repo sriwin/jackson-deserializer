@@ -1,0 +1,36 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    // google dependencies
+    implementation 'com.google.guava:guava:28.1-jre'
+    implementation "com.google.code.gson:gson:2.8.5"
+    implementation "io.gsonfire:gson-fire:1.8.4"
+
+    // jackson
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.10.4'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.4'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    // other jars
+    implementation "org.apache.commons:commons-lang3:3.10"
+    implementation "commons-io:commons-io:2.6"
+
+    // JUnit dependencies
+    testImplementation 'junit:junit:4.12'
+}
+
+application {
+    // Define the main class for the application.
+    mainClassName = 'com.sriwin.jackson.xml.test.DeserializeTest'
+}
